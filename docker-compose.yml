@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - 15672:15672
+      - 5672:5672
+  myapp:
+    image: alexeyboo/springboot-microservice:latest
+    ports:
+      - 8081:8081
+    restart: on-failure
+    depends_on:
+      - rabbitmq
+    environment:
+      RABBIT_HOST: rabbitmq
