@@ -18,12 +18,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class UserControllerIntegrationTest {
 
 	@Autowired
-	private MockMvc mockMvc;
+	MockMvc mockMvc;
 	@Autowired
-	private ObjectMapper objectMapper;
+	ObjectMapper objectMapper;
 
 	@Test
-	public void saveTest() throws Exception {
+	void saveTest() throws Exception {
 		User user = new User("1", "Pakalu", "Papito", 1966);
 
 		this.mockMvc

@@ -1,4 +1,4 @@
-package com.alexeyboo.microserviceexample.MQ;
+package com.alexeyboo.microserviceexample.mq;
 
 import com.alexeyboo.microserviceexample.config.RabbitMQConfig;
 import com.alexeyboo.microserviceexample.model.User;
